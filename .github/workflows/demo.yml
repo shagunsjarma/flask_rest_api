@@ -1,8 +1,13 @@
+
 name: Rest Api Flask
 on: push
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      -name: Deploy
-      run: echo "deploying...."
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy
+        run: echo "deploying...."
